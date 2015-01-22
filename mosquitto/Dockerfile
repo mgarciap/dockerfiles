@@ -12,4 +12,4 @@ RUN echo "deb http://repo.mosquitto.org/debian stable main" >> /etc/apt/sources.
 RUN apt-get update && apt-get install -y mosquitto
 
 EXPOSE 1883
-ENTRYPOINT ["mosquitto"]
+CMD ["mosquitto"]
