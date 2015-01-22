@@ -1,0 +1,16 @@
+# Mosquitto MQTT Broker
+
+Taken from http://mosquitto.org
+
+> Mosquitto is an open source (BSD licensed) message broker that implements the MQ Telemetry Transport protocol
+> versions 3.1 and 3.1.1. 
+> MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for "machine to machine" messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontrollers like the Arduino.
+> ...
+
+
+## Instructions:
+
+```
+sudo docker pull mgarciap/mosquitto
+sudo docker run -dp 1883:1883 mgarciap/mosquitto
+```
