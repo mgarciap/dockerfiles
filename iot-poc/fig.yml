@@ -12,5 +12,7 @@ mosquitto:
 
 nodered:
   image: mgarciap/node-red
+  links:
+  - mosquitto
   ports:
   - "1880" 
