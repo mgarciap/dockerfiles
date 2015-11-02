@@ -1,15 +1,8 @@
-FROM node
+FROM node:0.12
 MAINTAINER Manuel Garcia <manuel.garcia@altoros.com> / <mgarciap@gmail.com>
 
-ENV DEBIAN_FRONTEND noninteractive
-
-RUN wget https://github.com/node-red/node-red/archive/0.9.1.tar.gz
-RUN tar -xzf 0.9.1.tar.gz -C /opt
-RUN rm 0.9.1.tar.gz
-
-WORKDIR /opt/node-red-0.9.1
-RUN npm install --production
+# Installl Node-Red version 0.11.2
+RUN npm install -g node-red@0.11.2
 
 EXPOSE 1880
-ENTRYPOINT ["node"]
-CMD ["red.js"]
+CMD ["/usr/local/bin/node-red"]
